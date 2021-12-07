@@ -1,0 +1,36 @@
+{
+    "name": "amiltone/keycloack-token-bundle",
+    "type": "symfony-bundle", 
+    "license": "proprietary",
+    "description": "Parse keycloack token",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Tanguy Martinand",
+            "role": "Developer"
+        },
+        {
+            "name": "Thibault Willer",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "symfony/framework-bundle": "5.0.*",
+        "symfony/http-kernel": "5.1.5",
+        "symfony/http-foundation": "5.0.*",
+        "symfony/event-dispatcher": "5.0.*",
+        "doctrine/annotations": "1.13.*",
+        "symfony/dependency-injection": "5.0.*",
+        "symfony/config": "5.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.10",
+        "symfony/browser-kit": "5.0.*",
+        "symfony/phpunit-bridge": "5.0.*"
+    },
+
+    "autoload": {
+      "psr-4": { "Amiltone\\KeycloackTokenBundle\\": "src/" }
+    }
+}

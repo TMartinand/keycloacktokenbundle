@@ -1,0 +1,18 @@
+services:
+    keycloack_token_decode.decode_token_user:
+        class: Amiltone\KeycloackTokenBundle\Service\DecodeTokenUser
+        autowire: false
+
+    keycloack_token_request.user_verification_listener:
+        class:  Amiltone\KeycloackTokenBundle\EventListener\UserVerificationListener
+        autowire: true
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    keycloack_token_subscriber.request_subscriber:
+        class:  Amiltone\KeycloackTokenBundle\EventSubscriber\RequestSubscriber
+        autowire: true
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+    Amiltone\KeycloackTokenBundle\Service\DecodeTokenUser: '@keycloack_token_decode.decode_token_user'
