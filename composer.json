@@ -3,7 +3,7 @@
     "type": "symfony-bundle", 
     "license": "proprietary",
     "description": "Parse keycloack token",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "authors": [
         {
             "name": "Tanguy Martinand",
